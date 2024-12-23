@@ -1,0 +1,68 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Jarrón de Cerámica",
+        "description": "Jarrón hecho a mano con acabados texturizados, ideal para flores o decoración minimalista.",
+        "price": "35.99",
+        "image": "../assets/images/item_01.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Alfombra Étnica",
+        "description": "Alfombra tejida con patrones geométricos inspirados en culturas nativas.",
+        "price": "120.50",
+        "image": "./assets/images/item_02.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Reloj de Pared Moderno",
+        "description": "Reloj con diseño moderno y silencioso, perfecto para cualquier ambiente.",
+        "price": "45.00",
+        "image": "./assets/images/item_03.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Juego de Velas Aromáticas",
+        "description": "Set de 3 velas de cera natural con aromas a vainilla, lavanda y canela.",
+        "price": "22.99",
+        "image": "./assets/images/item_04.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Cojín Decorativo",
+        "description": "Cojín con funda de lino y estampado floral, ideal para sofás y camas.",
+        "price": "18.75",
+        "image": "./assets/images/item_05.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Lámpara de Mesa",
+        "description": "Lámpara con base de madera y pantalla de lino, perfecta para crear un ambiente acogedor.",
+        "price": "65.20",
+        "image": "./assets/images/item_06.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Espejo Redondo",
+        "description": "Espejo con marco de bambú natural, ideal para baños o salas de estar.",
+        "price": "80.00",
+        "image": "./assets/images/item_07.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Estantería Flotante",
+        "description": "Estantería de madera con diseño flotante para una organización funcional y moderna.",
+        "price": "50.99",
+        "image": "./assets/images/item_08.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Maceta de Concreto",
+        "description": "Maceta pequeña y robusta, ideal para plantas suculentas o cactus.",
+        "price": "15.49",
+        "image": "./assets/images/item_09.jpg"
+      }
+    ]
+  }
+  

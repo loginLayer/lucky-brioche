@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./scritps/app.js">
+    <link rel="stylesheet" href="./scritps/components.js">
+    <link rel="stylesheet" href="./scritps/utils.js">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mensajes = ["VIGGIANO", "Il piacere", "di vivere"];
+            let indice = 0;
+
+            function animarTitulo() {
+                document.title = mensajes[indice];
+                indice = (indice + 1) % mensajes.length; // Ciclo infinito
+                setTimeout(animarTitulo, 3000); // Cambia cada 500 ms
+            }
+
+            animarTitulo(); // Inicia la animación
+        });
+    </script>
+
+
+
+
+    <style>
+        
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <span class="site_name sname_hover">Viggiano</span>
+            <span class="site_slogan">Il Piacere Di Vivere</span>
+        </div>
+
+        <div class="right-header">
+          <div class="links-box">
+              <a href="#">Ingresar</a>
+              <a href="#">Registrarse</a>
+              <a href="checkout.html">Pagar</a>
+              <label for="currency"></label>
+              <select class="dropdown" id="currency">
+                  <option value="peso" selected="selected">PESO</option>
+                  <option value="dolar">USD</option>
+                  <option value="euro">EUR</option>
+              </select>
+          </div>
+          <div class="apps">
+              <div class="search-container">
+                  <input type="text" name="search" placeholder="Buscar" required>
+                  <span class="material-icons">search</span>
+              </div>
+              <a href="checkout.html">
+                <div class="cart-box cbox_hover">
+                    <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+                    $ 0.00
+                </div>
+              </a>
+          </div>
+        </div>
+
+    </header>  
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#">Reseñas</a></li>
+            <li><a href="javascript:void(0);" onclick="openContactModal()">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- slider de prueba -->
+    <div class="slider-container">
+        <div class="slider">
+            <a href="productos.html"></a><img src="./assets/images/img1.jpg" alt="Imagen 1"></a>
+            <a href="productos.html"></a><img src="./assets/images/img2.jpg" alt="Imagen 2"></a>
+            <a href="productos.html"></a><img src="./assets/images/img3.jpg" alt="Imagen 3"></a>
+            <a href="productos.html"></a><img src="./assets/images/img4.jpg" alt="Imagen 4"></a>
+            <a href="productos.html"></a><img src="./assets/images/img5.jpg" alt="Imagen 5"></a>
+        </div>
+        <div class="slider-title active slider-title"><span class="first-letter">30% OFF durante diciembre con todas las tarjetas</span></div>
+        <div class="slider-title"><span>Ambientes sofisticados, confort absoluto</span></div>
+        <div class="slider-title"><span>Inspiración para cada rincón de tu hogar</span></div>
+        <div class="slider-title"><span>Estilo y calidad en cada detalle</span></div>
+        <div class="slider-title"><span>Detalles que transforman tus espacios</span></div>
+        <div class="slider-controls">
+            <div class="slide-indicator" onclick="advanceSlide(0)"></div>
+            <div class="slide-indicator" onclick="advanceSlide(1)"></div>
+            <div class="slide-indicator" onclick="advanceSlide(2)"></div>
+            <div class="slide-indicator" onclick="advanceSlide(3)"></div>
+            <div class="slide-indicator" onclick="advanceSlide(4)"></div>
+        </div>
+    </div>
+
+    <!-- cards -->
+    <div class="line"></div>
+    <section>
+      <div class="cards-title-container">
+        <span class="cards-title">Anímate a convertir tus sueños en realidad</span>
+     </div>
+      <div class="card-container">
+        
+        <div class="card">
+            <a href="productos.html"><img src="./assets/images/card_1.jpg" alt="Card 1"></a>
+            <p>Dormitorio</p>
+        </div>
+        <div class="card">
+            <a href="productos.html"><img src="./assets/images/card_2.png" alt="Card 2"></a>
+            <p>Gifts</p>
+        </div>
+        <div class="card">
+            <a href="productos.html"><img src="./assets/images/card_3.jpg" alt="Card 3"></a>
+            <p>Living</p>
+        </div>
+        <div class="card">
+            <a href="productos.html"><img src="./assets/images/card_4.png" alt="Card 4"></a>
+            <p>Cocina</p>
+        </div>
+        <!-- <div class="gap"></div> -->
+        <div class="card gap">
+            <a href="productos.html"><img src="./assets/images/card_5.jpg" alt="Card 5"></a>
+            <p>Navidad</p>
+        </div>
+        <div class="card gap">
+            <a href="productos.html"><img src="./assets/images/card_6.jpg" alt="Card 6"></a>
+            <p>Iluminación</p>
+        </div>
+        <div class="card gap">
+            <a href="productos.html"><img src="./assets/images/card_7.png" alt="Card 7"></a>
+            <p>Almohadones</p>
+        </div>
+        <div class="card gap">
+            <a href="productos.html"><img src="./assets/images/card_8.jpg" alt="Card 8"></a>
+            <p>Mobiliario</p>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container"></div>
+
+
+    <footer>
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">Nosotros</h2>
+          <ul>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Recursos</h2>
+          <ul>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">eBooks</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Contacto</h2>
+          <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Ventas</a></li>
+            <li><a href="#">Tips de Compra</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Newsletter</h2>
+          <p>Sigamos en contacto</p>
+          <form>
+            <input type="email" name="email" placeholder="vos@email.com">
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+      </section>
+    
+      <!-- Footer social -->
+      <section class="ft-social">
+        <ul class="ft-social-list">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </section>
+    
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="#">Términos &amp; Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li>&copy; 2025 Copyright VIGGIANO.</li>
+        </ul>
+      </section>
+    </footer>
+
+    <!-- Modal de Contacto -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+          <button class="modal-close" onclick="closeContactModal()">&times;</button>
+          <h3>Contacto</h3>
+          <form id="contactForm"
+              action="https://formspree.io/f/movqwbnl" 
+              method="POST">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name">
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+
+              <button type="submit">Enviar</button>
+          </form>
+      </div>
+  </div>
+
+    <script>
+        let currentSlide = 0;
+        const slider = document.querySelector('.slider');
+        const indicators = document.querySelectorAll('.slide-indicator');
+        const titles = document.querySelectorAll('.slider-title');
+        const totalSlides = 5;
+
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+
+            titles.forEach((title, index) => {
+                title.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function advanceSlide(index = null) {
+            currentSlide = index !== null ? index : (currentSlide + 1) % totalSlides;
+            updateSliderPosition();
+        }
+
+        setInterval(() => {
+            advanceSlide();
+        }, 8000);
+
+        updateSliderPosition();
+    </script>
+    
+    <script>
+
+    // abrir y cerrar modal de contacto
+    function openContactModal() {
+        document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    function closeContactModal() {
+        document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // cerrar modal
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // formspree
+    var form = document.getElementById("my-form");
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+        }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        } else {
+            response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+            })
+        }
+        }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+
+
+
+
+
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let isValid = true;
+    
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        if (name.value.trim() === "" || name.value.length < 2) {
+            alert("El nombre debe tener al menos 2 caracteres.");
+            isValid = false;
+        }
+
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email.value)) {
+            alert("Por favor, ingresa un email válido.");
+            isValid = false;
+        }
+    
+        if (message.value.trim() === "" || message.value.length < 10) {
+            alert("El mensaje debe tener al menos 10 caracteres.");
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert("Formulario enviado correctamente.");
+            this.submit();
+        }
+    });
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>

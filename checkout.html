@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./scripts/app.js">
+    <link rel="stylesheet" href="./scripts/components.js">
+    <link rel="stylesheet" href="./scripts/utils.js">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mensajes = ["VIGGIANO", "Il piacere", "di vivere"];
+            let indice = 0;
+
+            function animarTitulo() {
+                document.title = mensajes[indice];
+                indice = (indice + 1) % mensajes.length; // Ciclo infinito
+                setTimeout(animarTitulo, 3000); // Cambia cada 500 ms
+            }
+
+            animarTitulo(); // Inicia la animación
+        });
+    </script>
+
+
+
+
+    <style>
+        
+    </style>
+
+
+</head>
+<body>
+  <header>
+    <div class="brand">
+        <span class="site_name sname_hover">Viggiano</span>
+        <span class="site_slogan">Il Piacere Di Vivere</span>
+    </div>
+
+    <div class="right-header">
+      <div class="links-box">
+          <a href="#">Ingresar</a>
+          <a href="#">Registrarse</a>
+          <a href="checkout.html">Pagar</a>
+          <label for="currency"></label>
+          <select class="dropdown" id="currency">
+              <option value="peso" selected="selected">PESO</option>
+              <option value="dolar">USD</option>
+              <option value="euro">EUR</option>
+          </select>
+      </div>
+      <div class="apps">
+          <div class="search-container">
+              <input type="text" name="search" placeholder="Buscar" required>
+              <span class="material-icons">search</span>
+          </div>
+          <a href="checkout.html">
+            <div class="cart-box cbox_hover">
+                <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+                $ 0.00
+            </div>
+          </a>
+      </div>
+    </div>
+
+</header>  
+
+<nav>
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="#">Reseñas</a></li>
+      <li><a href="javascript:void(0);" onclick="openContactModal()">Contacto</a></li>
+  </ul>
+</nav>
+
+
+
+    <!-- carrito  -->
+    <section class="carrito">
+      <p class="title-cart">Chekout Compra</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="items"></tbody>
+      </table>
+
+      <div class="total">
+        <p class="total-compra">Total compra: $ <span id="total-compra">0</span></p>
+      </div>
+
+      <div class="acciones">
+        <button class="btn" id="btn-confirmar">Finalizar Compra</button>
+        <button class="btn" id="btn-vaciar">Vaciar Carrito</button>
+      </div>
+    </section>
+
+    <script src="./scripts/carrito.js"></script>
+
+
+
+
+
+
+
+
+    
+    <div class="container"></div>
+
+    <footer>
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">Nosotros</h2>
+          <ul>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Recursos</h2>
+          <ul>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">eBooks</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Contacto</h2>
+          <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Ventas</a></li>
+            <li><a href="#">Tips de Compra</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Newsletter</h2>
+          <p>Sigamos en contacto</p>
+          <form>
+            <input type="email" name="email" placeholder="vos@email.com">
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+      </section>
+    
+      <!-- Footer social -->
+      <section class="ft-social">
+        <ul class="ft-social-list">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </section>
+    
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="#">Términos &amp; Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li>&copy; 2025 Copyright VIGGIANO.</li>
+        </ul>
+      </section>
+    </footer>
+
+<!-- Modal de Contacto -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+      <button class="modal-close" onclick="closeContactModal()">&times;</button>
+      <h3>Contacto</h3>
+      <form id="contactForm"
+          action="https://formspree.io/f/movqwbnl" 
+          method="POST">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Enviar</button>
+      </form>
+  </div>
+</div>
+
+    <script>
+    // abrir y cerrar modal de contacto
+    function openContactModal() {
+        document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    function closeContactModal() {
+        document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // cerrar modal
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // formspree
+    var form = document.getElementById("my-form");
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+        }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        } else {
+            response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+            })
+        }
+        }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+
+
+
+
+    
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let isValid = true;
+  
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const message = document.getElementById("message");
+
+      if (name.value.trim() === "" || name.value.length < 2) {
+          alert("El nombre debe tener al menos 2 caracteres.");
+          isValid = false;
+      }
+
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(email.value)) {
+          alert("Por favor, ingresa un email válido.");
+          isValid = false;
+      }
+  
+      if (message.value.trim() === "" || message.value.length < 10) {
+          alert("El mensaje debe tener al menos 10 caracteres.");
+          isValid = false;
+      }
+
+      if (isValid) {
+          alert("Formulario enviado correctamente.");
+          this.submit();
+      }
+  });
+  
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
